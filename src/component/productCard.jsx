@@ -2,8 +2,9 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { Box, Card, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useMutation } from "react-query";
+import { Link } from "react-router-dom";
 import { addToBagMutation, patchtoBagMutation } from "../hooks/addToBag";
 import GetGoods from "../hooks/getGoods";
 
@@ -65,6 +66,7 @@ const ProductCard = ({ good }) => {
   };
 
   return (
+    <Link to={`product?id=${good.id}`}>
     <Card
       sx={{
         width: "100%",
@@ -140,6 +142,7 @@ const ProductCard = ({ good }) => {
         </Box>
       </CardContent>
     </Card>
+    </Link>
   );
 };
 

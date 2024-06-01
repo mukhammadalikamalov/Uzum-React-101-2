@@ -1,7 +1,7 @@
+import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import ProductCard from '../../component/productCard';
 import SearchAppBar from '../../component/Layout/Header';
+import ProductCard from '../../component/productCard';
 
 const Favorites = () => {
   const [likedGoods, setLikedGoods] = useState([]);
@@ -14,13 +14,12 @@ const Favorites = () => {
   return (
     <section style={{ padding: '20px' }}>
       <SearchAppBar />
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}>
         {likedGoods.length === 0 ? (
           <Box
             display="flex"
             flexDirection="column"
             alignItems="center"
-            justifyContent="center"
             margin="80px 0 70px"
             width="100%"
           >
