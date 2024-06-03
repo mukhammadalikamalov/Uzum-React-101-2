@@ -2,6 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchAppBar from '../../component/Layout/Header';
 import ProductCard from '../../component/productCard';
+import Footer from '../../component/Layout/Footer';
 
 const Favorites = () => {
   const [likedGoods, setLikedGoods] = useState([]);
@@ -69,6 +70,7 @@ const Favorites = () => {
           </Box>
         )}
       </Box>
+      <Footer />
     </section>
   );
 };

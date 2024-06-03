@@ -6,6 +6,7 @@ import Caroucel from "./component/Layout/Caroucel";
 import SearchAppBar from "./component/Layout/Header";
 import BigImage from "./component/bigImage";
 import ProductCard from "./component/productCard";
+import Footer from "./component/Layout/Footer";
 
 function Home() {
   const { data, isLoading, isError } = useQuery("goods", async () => {
@@ -79,6 +80,7 @@ function Home() {
           </Box>
         ))}
       </Container>
+      <Footer />
     </>
   );
 }
